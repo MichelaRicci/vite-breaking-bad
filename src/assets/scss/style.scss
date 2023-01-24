@@ -11,6 +11,18 @@ body {
 }
 
 header {
-    height: 150px;
+    height: 20vh;
     width: 1400px;
+}
+
+
+#main-box {
+    height: 80vh;
+
+    padding: 40px 20px;
+
+    #gallery {
+        background-color: $bg-gray;
+        height: 100%;
+    }
 }
