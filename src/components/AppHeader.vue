@@ -26,7 +26,7 @@
 
 <style lang="scss" scoped>
 img {
-    width: 400px;
+    width: 300px;
 }
 
 .circle-container {
