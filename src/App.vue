@@ -16,7 +16,7 @@ export default {
     created() {
         axios.get("https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?per=10&page=1")
             .then((response) => {
-                store.pokemon = response.data.docs
+                store.pokemon.push(...response.data.docs);
             })
     }
 };

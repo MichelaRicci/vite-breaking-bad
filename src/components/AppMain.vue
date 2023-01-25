@@ -8,7 +8,7 @@ export default {
 
     data() {
         return {
-            store
+            store,
         }
     },
 }
@@ -23,9 +23,9 @@ export default {
 
             <div class="row row-cols-5">
 
-                <div v-for="pokemon in store" :key="pokemon.id">
-                    <div> {{`#${pokemon.number}`}} </div>
-                    <div> <img :src=pokemon.imageUrl alt=""></div>
+                <div v-for="pokemon in store.pokemon" :key="pokemon.id">
+                    <div> {{`${pokemon.number}`}} </div>
+                    <div><img :src=pokemon.imageUrl alt=""></div>
                     <div>{{ pokemon.name }}</div>
                     <div>{{ pokemon.type1 }}</div>
                 </div>
@@ -38,5 +38,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+img {
+    width: 100%;
+}
 </style>

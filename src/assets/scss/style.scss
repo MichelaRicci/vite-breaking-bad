@@ -17,12 +17,13 @@ header {
 
 
 #main-box {
-    height: 80vh;
+    min-height: 80vh;
 
     padding: 40px 20px;
 
     #gallery {
         background-color: $bg-gray;
         height: 100%;
+        padding: 20px;
     }
 }
