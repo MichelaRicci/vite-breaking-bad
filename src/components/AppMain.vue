@@ -1,6 +1,7 @@
 <script>
 import { store } from '../data/store.js';
 
+
 export default {
 
     pokemon: [],
@@ -9,6 +10,7 @@ export default {
     data() {
         return {
             store,
+
         }
     },
 }
@@ -23,12 +25,13 @@ export default {
 
             <div class="row row-cols-5">
 
-                <div v-for="pokemon in store.pokemon" :key="pokemon.id">
-                    <div> {{`${pokemon.number}`}} </div>
-                    <div><img :src=pokemon.imageUrl alt=""></div>
+                <div class="card" v-for="pokemon in store.pokemon" :key="pokemon.id">
+                    <div> {{`#${pokemon.number}`}} </div>
+                    <div class="img-container d-flex justify-content-center"><img :src=pokemon.imageUrl alt=""></div>
                     <div>{{ pokemon.name }}</div>
                     <div>{{ pokemon.type1 }}</div>
                 </div>
+
             </div>
 
         </div>
@@ -38,7 +41,20 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: #ffffff;
+
+    margin: 15px;
+
+}
+
 img {
-    width: 100%;
+    border-radius: 50%;
+
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
 }
 </style>
