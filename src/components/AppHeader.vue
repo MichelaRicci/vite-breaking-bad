@@ -1,5 +1,21 @@
 <script>
 
+import Tendina from './Tendina.vue/';
+
+export default {
+    name: 'AppHeader',
+    components: { Tendina },
+
+    methods: {
+        onFilter(selectedOption) {
+            console.log(selectedOption)
+
+            this.$emit('filter-change', selectedOption)
+        }
+    },
+    emits: ['filter-change']
+}
+
 </script>
 
 <template>
@@ -13,6 +29,11 @@
                     <div class="circle"></div>
                     <div class="circle"></div>
                     <div class="circle"></div>
+
+                    <div>
+                        <tendina @option-change="onFilter"></tendina>
+
+                    </div>
                 </div>
             </div>
 
